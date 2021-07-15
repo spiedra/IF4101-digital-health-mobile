@@ -7,7 +7,9 @@ import com.randalljuan.proyecto3_mobile_b95212_b97452.Models.Module
 import com.randalljuan.proyecto3_mobile_b95212_b97452.R
 import com.randalljuan.proyecto3_mobile_b95212_b97452.databinding.SingleItemBinding
 
-class ModuleAdapter(private  var moduleList: List<Module>): RecyclerView.Adapter<ModuleAdapter.ViewHolder>() {
+class ModuleAdapter(private  var moduleList: List<Module>,
+                    private var optionsMenuClickListener: OptionsMenuClickListener
+                    ): RecyclerView.Adapter<ModuleAdapter.ViewHolder>() {
 
     interface OptionsMenuClickListener {
         fun onOptionsMenuClicked(position: Int)
@@ -30,6 +32,9 @@ class ModuleAdapter(private  var moduleList: List<Module>): RecyclerView.Adapter
                     "Citas" -> binding.ivModule.setImageResource(R.drawable.ic_citas)
                     "Vacunas" ->binding.ivModule.setImageResource(R.drawable.ic_vacuna)
                     "Alergias" ->binding.ivModule.setImageResource(R.drawable.ic_alergias)
+                }
+                binding.ivModule.setOnClickListener{
+                    optionsMenuClickListener.onOptionsMenuClicked(position)
                 }
             }
         }
