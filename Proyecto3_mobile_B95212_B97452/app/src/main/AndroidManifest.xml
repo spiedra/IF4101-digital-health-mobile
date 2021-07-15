@@ -9,6 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Proyecto3_mobile_B95212_B97452">
+        <activity android:name=".AppointmentActivity"></activity>
+        <activity android:name=".VaccineActivity" />
+        <activity android:name=".AllergyActivity" />
+        <activity android:name=".GestionActivity" />
+        <activity android:name=".ww" />
+        <activity android:name=".MenuActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
