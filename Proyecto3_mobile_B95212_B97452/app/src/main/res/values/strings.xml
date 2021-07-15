@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Proyecto3_mobile_B95212_B97452</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="gestion">Gestión de datos</string>
+    <string name="citas">Citas</string>
+    <string name="vacunas">Vacunas</string>
+    <string name="alergias">Alergias</string>
 </resources>
