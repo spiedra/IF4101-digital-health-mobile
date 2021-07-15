@@ -1,5 +1,6 @@
 package com.randalljuan.proyecto3_mobile_b95212_b97452
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -22,9 +23,43 @@ class MenuActivity : AppCompatActivity() {
         _binding = ActivityMenuBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.moduleList.layoutManager = LinearLayoutManager(this)
-        moduleAdapter = ModuleAdapter(moduleList)
+
+        moduleAdapter = ModuleAdapter(moduleList , object : ModuleAdapter.OptionsMenuClickListener{
+
+            override fun onOptionsMenuClicked(position: Int) {
+
+                performOptionsMenuClick(position)
+            }
+        })
+
         binding.moduleList.adapter = moduleAdapter
         addModules();
+    }
+
+    private fun performOptionsMenuClick(position: Int) {
+        when(position){
+            0 -> showGestionModule()
+            1 -> showAppointmentModule()
+            2 -> showVaccineModule()
+            3 -> showAllergyModule()
+        }
+    }
+
+    private fun showGestionModule(){
+        val intent = Intent(this, GestionActivity::class.java)
+        startActivity(intent)
+    }
+    private fun showAppointmentModule(){
+        val intent = Intent(this, AppointmentActivity::class.java)
+        startActivity(intent)
+    }
+    private fun showVaccineModule(){
+        val intent = Intent(this, VaccineActivity::class.java)
+        startActivity(intent)
+    }
+    private fun showAllergyModule(){
+        val intent = Intent(this, AllergyActivity::class.java)
+        startActivity(intent)
     }
 
     fun addModules(){

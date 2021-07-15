@@ -20,8 +20,8 @@ class MainActivity : AppCompatActivity(){
         setContentView(R.layout.activity_main)
         viewMenu();
     }
-    fun viewMenu() {
 
+    fun viewMenu() {
         val intent = Intent(this, MenuActivity::class.java)
         startActivity(intent)
     }
