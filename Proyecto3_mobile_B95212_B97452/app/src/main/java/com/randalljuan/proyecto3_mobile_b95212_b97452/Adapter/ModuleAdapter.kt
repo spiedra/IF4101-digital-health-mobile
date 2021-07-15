@@ -24,12 +24,12 @@ class ModuleAdapter(private  var moduleList: List<Module>): RecyclerView.Adapter
     override fun onBindViewHolder(holder: ModuleAdapter.ViewHolder, position: Int) {
         with(holder){
             with(moduleList[position]){
-                binding.tvLangName.text = this.moduleName
+                binding.moduleName.text = this.moduleName
                 when (this.moduleName) {
-                    "Gestión de datos" -> binding.ivLanguage.setImageResource(R.drawable.ic_gestion)
-                    "Citas" -> binding.ivLanguage.setImageResource(R.drawable.ic_citas)
-                    "Vacunas" ->binding.ivLanguage.setImageResource(R.drawable.ic_vacuna)
-                    "Alergias" ->binding.ivLanguage.setImageResource(R.drawable.ic_alergias)
+                    "Gestión de datos" -> binding.ivModule.setImageResource(R.drawable.ic_gestion)
+                    "Citas" -> binding.ivModule.setImageResource(R.drawable.ic_citas)
+                    "Vacunas" ->binding.ivModule.setImageResource(R.drawable.ic_vacuna)
+                    "Alergias" ->binding.ivModule.setImageResource(R.drawable.ic_alergias)
                 }
             }
         }
