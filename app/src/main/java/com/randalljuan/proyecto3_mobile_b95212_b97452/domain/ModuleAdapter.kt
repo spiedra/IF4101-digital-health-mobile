@@ -1,4 +1,4 @@
-package com.randalljuan.proyecto3_mobile_b95212_b97452.Adapter
+package com.randalljuan.proyecto3_mobile_b95212_b97452.domain
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -18,12 +18,12 @@ class ModuleAdapter(private  var moduleModelList: List<ModuleModel>,
     inner class ViewHolder(val binding: SingleItemBinding) : RecyclerView.ViewHolder(binding.root)
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ModuleAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = SingleItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: ModuleAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         with(holder){
             with(moduleModelList[position]){
                 binding.moduleName.text = this.moduleName
@@ -43,5 +43,4 @@ class ModuleAdapter(private  var moduleModelList: List<ModuleModel>,
     override fun getItemCount(): Int {
         return moduleModelList.size
     }
-
 }

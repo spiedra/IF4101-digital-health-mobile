@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.randalljuan.proyecto3_mobile_b95212_b97452.Adapter.ModuleAdapter
+import com.randalljuan.proyecto3_mobile_b95212_b97452.domain.ModuleAdapter
 import com.randalljuan.proyecto3_mobile_b95212_b97452.data.model.ModuleModel
 import com.randalljuan.proyecto3_mobile_b95212_b97452.databinding.ActivityMenuBinding
 
