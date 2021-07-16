@@ -1,12 +1,11 @@
-package com.randalljuan.proyecto3_mobile_b95212_b97452
+package com.randalljuan.proyecto3_mobile_b95212_b97452.ui.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.randalljuan.proyecto3_mobile_b95212_b97452.Adapter.ModuleAdapter
-import com.randalljuan.proyecto3_mobile_b95212_b97452.Models.Module
-import com.randalljuan.proyecto3_mobile_b95212_b97452.databinding.ActivityMainBinding
+import com.randalljuan.proyecto3_mobile_b95212_b97452.data.model.ModuleModel
 import com.randalljuan.proyecto3_mobile_b95212_b97452.databinding.ActivityMenuBinding
 
 class MenuActivity : AppCompatActivity() {
@@ -14,7 +13,7 @@ class MenuActivity : AppCompatActivity() {
     private val binding get() = _binding!!
 
 
-    private var moduleList = ArrayList<Module>()
+    private var moduleList = ArrayList<ModuleModel>()
     private lateinit var moduleAdapter: ModuleAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -63,10 +62,10 @@ class MenuActivity : AppCompatActivity() {
     }
 
     fun addModules(){
-        val gestModule= Module("Gestión de datos")
-        val appointmentModule= Module("Citas")
-        val vaccineModule= Module("Vacunas")
-        val allergiesModule= Module("Alergias")
+        val gestModule= ModuleModel("Gestión de datos")
+        val appointmentModule= ModuleModel("Citas")
+        val vaccineModule= ModuleModel("Vacunas")
+        val allergiesModule= ModuleModel("Alergias")
         moduleList.add(gestModule)
         moduleList.add(appointmentModule)
         moduleList.add(vaccineModule)

@@ -9,13 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Proyecto3_mobile_B95212_B97452">
-        <activity android:name=".AppointmentActivity"></activity>
-        <activity android:name=".VaccineActivity" />
-        <activity android:name=".AllergyActivity" />
-        <activity android:name=".GestionActivity" />
+        <activity android:name=".ui.view.AppointmentActivity"></activity>
+        <activity android:name=".ui.view.VaccineActivity" />
+        <activity android:name=".ui.view.AllergyActivity" />
+        <activity android:name=".ui.view.GestionActivity" />
         <activity android:name=".ww" />
-        <activity android:name=".MenuActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.view.MenuActivity" />
+        <activity android:name=".ui.view.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

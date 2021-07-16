@@ -3,11 +3,11 @@ package com.randalljuan.proyecto3_mobile_b95212_b97452.Adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.randalljuan.proyecto3_mobile_b95212_b97452.Models.Module
+import com.randalljuan.proyecto3_mobile_b95212_b97452.data.model.ModuleModel
 import com.randalljuan.proyecto3_mobile_b95212_b97452.R
 import com.randalljuan.proyecto3_mobile_b95212_b97452.databinding.SingleItemBinding
 
-class ModuleAdapter(private  var moduleList: List<Module>,
+class ModuleAdapter(private  var moduleModelList: List<ModuleModel>,
                     private var optionsMenuClickListener: OptionsMenuClickListener
                     ): RecyclerView.Adapter<ModuleAdapter.ViewHolder>() {
 
@@ -25,7 +25,7 @@ class ModuleAdapter(private  var moduleList: List<Module>,
 
     override fun onBindViewHolder(holder: ModuleAdapter.ViewHolder, position: Int) {
         with(holder){
-            with(moduleList[position]){
+            with(moduleModelList[position]){
                 binding.moduleName.text = this.moduleName
                 when (this.moduleName) {
                     "Gestión de datos" -> binding.ivModule.setImageResource(R.drawable.ic_gestion)
@@ -41,7 +41,7 @@ class ModuleAdapter(private  var moduleList: List<Module>,
     }
 
     override fun getItemCount(): Int {
-        return moduleList.size
+        return moduleModelList.size
     }
 
 }
