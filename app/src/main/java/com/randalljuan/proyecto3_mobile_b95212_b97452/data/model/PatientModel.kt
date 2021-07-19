@@ -4,23 +4,23 @@ import com.google.gson.annotations.SerializedName
 
 data class PatientModel(
     @SerializedName("idCard")
-    val idCard: String?,
+    val idCard: String? = null,
     @SerializedName("name")
-    val name: String?,
+    val name: String? = null,
     @SerializedName("lastName")
-    val lastName: String?,
+    val lastName: String? = null,
     @SerializedName("password")
-    val password: String?,
+    val password: String? = null,
     @SerializedName("age")
-    val age: Int?,
+    val age: Int? = null,
     @SerializedName("bloodType")
-    val bloodType: String?,
+    val bloodType: String? = null,
     @SerializedName("civilStatus")
-    val civilStatus: String?,
+    val civilStatus: String? = null,
     @SerializedName("address")
-    val address: String?,
+    val address: String? = null,
     @SerializedName("phoneNumber1")
-    val phoneNumber1: String?,
+    val phoneNumber1: String? = null,
     @SerializedName("phoneNumber2")
-    val phoneNumber2: Any? = null
+    val phoneNumber2: String? = null
 )

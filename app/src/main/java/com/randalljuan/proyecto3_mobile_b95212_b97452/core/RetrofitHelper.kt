@@ -6,8 +6,10 @@ import retrofit2.converter.gson.GsonConverterFactory
 object RetrofitHelper {
     fun getRetrofit(): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://localhost:44348")
+            .baseUrl("http://192.168.0.5/apiLocalhost/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
 }
+
+//192.168.0.5

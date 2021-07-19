@@ -2,12 +2,14 @@ package com.randalljuan.proyecto3_mobile_b95212_b97452.ui.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import com.randalljuan.proyecto3_mobile_b95212_b97452.R
-import com.randalljuan.proyecto3_mobile_b95212_b97452.data.service.LogInService
+import com.randalljuan.proyecto3_mobile_b95212_b97452.data.service.AppointmentService
+import com.randalljuan.proyecto3_mobile_b95212_b97452.data.service.PatientService
 import org.json.JSONObject
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody
@@ -32,11 +34,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener{
     override fun onClick(v: View) {
         when (v.id) {
             R.id.btn_login -> {
-                this.tvIdCard = findViewById(R.id.tv_id_card)
-                this.tvPassword = findViewById(R.id.tv_password)
-                Toast.makeText(this, LogInService().checksCredentials(createRequestBody(
-                    "1-1818-0555", "admin")
-                ), Toast.LENGTH_SHORT).show()
+                val patientService = PatientService()
+                patientService.getPersonalInformation("1-1818-0555")
             }
             R.id.btn_sign_up -> {
                 Toast.makeText(this, "Sign in button has been pressed", Toast.LENGTH_SHORT).show()
