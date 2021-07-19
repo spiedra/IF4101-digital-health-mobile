@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 data class VaccinationModel (
     @SerializedName("VaccineType")
-    val patientCard: String?,
+    val vaccinationType: String?,
     @SerializedName("FullName")
     val fullname: String?,
     @SerializedName("Description")
@@ -12,5 +12,5 @@ data class VaccinationModel (
     @SerializedName("LattestVaccineDate")
     val latestVaccineDate: String?,
     @SerializedName("NextVaccineDate")
-    val specialityType: String?
+    val nextVaccineDate: String?
 )
