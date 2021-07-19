@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.randalljuan.proyecto3_mobile_b95212_b97452.domain.ModuleAdapter
+import com.randalljuan.proyecto3_mobile_b95212_b97452.adapter.ModuleAdapter
 import com.randalljuan.proyecto3_mobile_b95212_b97452.data.model.ModuleModel
 import com.randalljuan.proyecto3_mobile_b95212_b97452.databinding.ActivityMenuBinding
 
@@ -23,7 +23,7 @@ class MenuActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.moduleList.layoutManager = LinearLayoutManager(this)
 
-        moduleAdapter = ModuleAdapter(moduleList , object : ModuleAdapter.OptionsMenuClickListener{
+        moduleAdapter = ModuleAdapter(moduleList, object : ModuleAdapter.OptionsMenuClickListener {
 
             override fun onOptionsMenuClicked(position: Int) {
 
@@ -32,11 +32,11 @@ class MenuActivity : AppCompatActivity() {
         })
 
         binding.moduleList.adapter = moduleAdapter
-        addModules();
+        addModules()
     }
 
     private fun performOptionsMenuClick(position: Int) {
-        when(position){
+        when (position) {
             0 -> showGestionModule()
             1 -> showAppointmentModule()
             2 -> showVaccineModule()
@@ -44,28 +44,31 @@ class MenuActivity : AppCompatActivity() {
         }
     }
 
-    private fun showGestionModule(){
+    private fun showGestionModule() {
         val intent = Intent(this, GestionActivity::class.java)
         startActivity(intent)
     }
-    private fun showAppointmentModule(){
+
+    private fun showAppointmentModule() {
         val intent = Intent(this, AppointmentActivity::class.java)
         startActivity(intent)
     }
-    private fun showVaccineModule(){
+
+    private fun showVaccineModule() {
         val intent = Intent(this, VaccineActivity::class.java)
         startActivity(intent)
     }
-    private fun showAllergyModule(){
+
+    private fun showAllergyModule() {
         val intent = Intent(this, AllergyActivity::class.java)
         startActivity(intent)
     }
 
-    fun addModules(){
-        val gestModule= ModuleModel("Gestión de datos")
-        val appointmentModule= ModuleModel("Citas")
-        val vaccineModule= ModuleModel("Vacunas")
-        val allergiesModule= ModuleModel("Alergias")
+    fun addModules() {
+        val gestModule = ModuleModel("Gestión de datos")
+        val appointmentModule = ModuleModel("Citas")
+        val vaccineModule = ModuleModel("Vacunas")
+        val allergiesModule = ModuleModel("Alergias")
         moduleList.add(gestModule)
         moduleList.add(appointmentModule)
         moduleList.add(vaccineModule)

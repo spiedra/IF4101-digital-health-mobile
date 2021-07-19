@@ -1,4 +1,4 @@
-package com.randalljuan.proyecto3_mobile_b95212_b97452.domain
+package com.randalljuan.proyecto3_mobile_b95212_b97452.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

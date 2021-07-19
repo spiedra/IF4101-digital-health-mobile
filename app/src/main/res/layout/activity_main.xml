@@ -1,12 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/white"
     android:layout_height="match_parent"
-    tools:context=".ui.view.MainActivity">
+    android:background="@color/shrek"
+    tools:context="com.randalljuan.proyecto3_mobile_b95212_b97452.ui.view.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="40dp"
+            android:contentDescription="@string/image_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_user"
+            tools:srcCompat="@drawable/ic_user" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/main_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:id="@+id/tv_id_card"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:autofillHints="@string/tv_id_card"
+            android:background="@color/white"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="@string/tv_id_card"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/black"
+            android:textSize="21sp" />
+
+        <EditText
+            android:id="@+id/tv_password"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:autofillHints="@string/tv_password"
+            android:background="@color/white"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="@string/tv_password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/black"
+            android:textSize="21sp" />
+
+        <Button
+            android:id="@+id/btn_login"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/white"
+            android:color="@color/white"
+            android:text="@string/btn_log_in"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            tools:text="@string/btn_log_in" />
+
+        <Button
+            android:id="@+id/btn_sign_up"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="25dp"
+            android:background="@color/white"
+            android:color="@color/white"
+            android:text="@string/btn_sign_up"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            tools:text="@string/btn_sign_up" />
+
+    </LinearLayout>
+
+</RelativeLayout>

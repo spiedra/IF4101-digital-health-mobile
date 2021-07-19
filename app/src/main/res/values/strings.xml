@@ -5,4 +5,11 @@
     <string name="citas">Citas</string>
     <string name="vacunas">Vacunas</string>
     <string name="alergias">Alergias</string>
+    <string name="module_name">Testing</string>
+    <string name="tv_id_card">ID Card</string>
+    <string name="tv_password">Password</string>
+    <string name="tv_sign_in">SignIn</string>
+    <string name="btn_log_in">LogIn</string>
+    <string name="btn_sign_up">Sign Up</string>
+    <string name="image_profile">Profile</string>
 </resources>
