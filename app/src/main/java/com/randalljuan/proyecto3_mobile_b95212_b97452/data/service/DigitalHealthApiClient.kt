@@ -1,6 +1,10 @@
 package com.randalljuan.proyecto3_mobile_b95212_b97452.data.service
 
+
+import com.randalljuan.proyecto3_mobile_b95212_b97452.data.model.AllergyModel
+import com.randalljuan.proyecto3_mobile_b95212_b97452.data.model.AppointmentModel
 import com.randalljuan.proyecto3_mobile_b95212_b97452.data.model.PatientModel
+import com.randalljuan.proyecto3_mobile_b95212_b97452.data.model.VaccinationModel
 import okhttp3.RequestBody
 import okhttp3.ResponseBody
 import retrofit2.Call
@@ -21,5 +25,13 @@ interface DigitalHealthApiClient {
 
     // Appointment
     @GET("/api/Appointment/GetAppointmentByCard")
-    fun getAppointmentByCard(@Query("patientCardId") patientCardId: String): Response<ResponseBody>
+    fun getAppointmentByCard(@Query("patientCardId") patientCardId: String): Response<AppointmentModel>
+
+    //Vaccination
+    @GET("/api/Vaccination/GetPatientVaccines")
+    fun getVaccinationByCard(@Query("IdCard") IdCard: String): Response<VaccinationModel>
+
+    //Allergy
+    @GET("/api/Allergy/GetPatientAllergies")
+    fun getAllergyByCard(@Query("IdCard") IdCard: String): Response<AllergyModel>
 }
