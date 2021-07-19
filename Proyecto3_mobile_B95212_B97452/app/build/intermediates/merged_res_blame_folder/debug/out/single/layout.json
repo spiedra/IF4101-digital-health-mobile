@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "C:\\Users\\Randm\\Desktop\\mobile_proyecro3\\IF4101-digital-health-mobile\\Proyecto3_mobile_B95212_B97452\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_gestion.xml",
+        "source": "C:\\Users\\Randm\\Desktop\\mobile_proyecro3\\IF4101-digital-health-mobile\\Proyecto3_mobile_B95212_B97452\\app\\src\\main\\res\\layout\\activity_gestion.xml"
+    },
+    {
+        "merged": "C:\\Users\\Randm\\Desktop\\mobile_proyecro3\\IF4101-digital-health-mobile\\Proyecto3_mobile_B95212_B97452\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_appointment.xml",
+        "source": "C:\\Users\\Randm\\Desktop\\mobile_proyecro3\\IF4101-digital-health-mobile\\Proyecto3_mobile_B95212_B97452\\app\\src\\main\\res\\layout\\activity_appointment.xml"
+    },
+    {
+        "merged": "C:\\Users\\Randm\\Desktop\\mobile_proyecro3\\IF4101-digital-health-mobile\\Proyecto3_mobile_B95212_B97452\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Randm\\Desktop\\mobile_proyecro3\\IF4101-digital-health-mobile\\Proyecto3_mobile_B95212_B97452\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Randm\\Desktop\\mobile_proyecro3\\IF4101-digital-health-mobile\\Proyecto3_mobile_B95212_B97452\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_allergy.xml",
+        "source": "C:\\Users\\Randm\\Desktop\\mobile_proyecro3\\IF4101-digital-health-mobile\\Proyecto3_mobile_B95212_B97452\\app\\src\\main\\res\\layout\\activity_allergy.xml"
+    },
+    {
+        "merged": "C:\\Users\\Randm\\Desktop\\mobile_proyecro3\\IF4101-digital-health-mobile\\Proyecto3_mobile_B95212_B97452\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_menu.xml",
+        "source": "C:\\Users\\Randm\\Desktop\\mobile_proyecro3\\IF4101-digital-health-mobile\\Proyecto3_mobile_B95212_B97452\\app\\src\\main\\res\\layout\\activity_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Randm\\Desktop\\mobile_proyecro3\\IF4101-digital-health-mobile\\Proyecto3_mobile_B95212_B97452\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_vaccine.xml",
+        "source": "C:\\Users\\Randm\\Desktop\\mobile_proyecro3\\IF4101-digital-health-mobile\\Proyecto3_mobile_B95212_B97452\\app\\src\\main\\res\\layout\\activity_vaccine.xml"
+    },
+    {
+        "merged": "C:\\Users\\Randm\\Desktop\\mobile_proyecro3\\IF4101-digital-health-mobile\\Proyecto3_mobile_B95212_B97452\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\single_item.xml",
+        "source": "C:\\Users\\Randm\\Desktop\\mobile_proyecro3\\IF4101-digital-health-mobile\\Proyecto3_mobile_B95212_B97452\\app\\src\\main\\res\\layout\\single_item.xml"
+    }
+]
