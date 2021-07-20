@@ -2,22 +2,20 @@ package com.randalljuan.proyecto3_mobile_b95212_b97452.ui.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import com.randalljuan.proyecto3_mobile_b95212_b97452.R
-import com.randalljuan.proyecto3_mobile_b95212_b97452.data.service.AppointmentService
-import com.randalljuan.proyecto3_mobile_b95212_b97452.data.service.PatientService
+import com.randalljuan.proyecto3_mobile_b95212_b97452.data.service.LoginService
 import org.json.JSONObject
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
 
-class MainActivity : AppCompatActivity(), View.OnClickListener{
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
-    private lateinit var btnLogIn : Button
+    private lateinit var btnLogIn: Button
     private lateinit var btnSignUp: Button
     private lateinit var tvIdCard: TextView
     private lateinit var tvPassword: TextView
@@ -34,8 +32,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener{
     override fun onClick(v: View) {
         when (v.id) {
             R.id.btn_login -> {
-                val patientService = PatientService()
-                patientService.getPersonalInformation("1-1818-0555")
+                tvIdCard = findViewById(R.id.tv_id_card)
+                tvPassword = findViewById(R.id.tv_password)
+                LoginService().validatePatientLogIn(
+                    createRequestBody(
+                        tvIdCard.text.toString(),
+                        tvPassword.text.toString()
+                    ), this
+                )
             }
             R.id.btn_sign_up -> {
                 Toast.makeText(this, "Sign in button has been pressed", Toast.LENGTH_SHORT).show()
@@ -43,12 +47,21 @@ class MainActivity : AppCompatActivity(), View.OnClickListener{
         }
     }
 
-    val setOnClickListeners: (Button) -> Unit = { btn: Button -> btn.setOnClickListener(this)}
+    val setOnClickListeners: (Button) -> Unit = { btn: Button -> btn.setOnClickListener(this) }
 
-    val createRequestBody: (String, String) -> RequestBody = {idCard: String, password: String ->
+    val createRequestBody: (String, String) -> RequestBody = { idCard: String, password: String ->
         val jsonObject = JSONObject()
-        jsonObject.put("name", idCard)
-        jsonObject.put("salary", password)
+        jsonObject.put("idCard", idCard)
+        jsonObject.put("name", null)
+        jsonObject.put("lastName", null)
+        jsonObject.put("password", password)
+        jsonObject.put("age", null)
+        jsonObject.put("bloodType", null)
+        jsonObject.put("civilStatus", null)
+        jsonObject.put("address", null)
+        jsonObject.put("phoneNumber1", null)
+        jsonObject.put("phoneNumber2", null)
         jsonObject.toString().toRequestBody("application/json; charset=utf-8".toMediaTypeOrNull())
     }
 }
+
