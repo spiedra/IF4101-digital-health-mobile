@@ -24,6 +24,7 @@ class VaccinationAdapter (private val vaccines: List<VaccinationModel>,
         val lblVaccinationType= item.findViewById(R.id.lblVaccinationType) as TextView
         val lblVaccinationDate= item.findViewById(R.id.lblVaccinationDate) as TextView
         var ivVaccine= item.findViewById(R.id.ivVaccine) as ImageView
+
         fun bindVaccination(vaccination:VaccinationModel){
             ivVaccine.setImageResource(R.drawable.ic_vaccine)
             lblVaccinationType.text=vaccination.vaccinationType

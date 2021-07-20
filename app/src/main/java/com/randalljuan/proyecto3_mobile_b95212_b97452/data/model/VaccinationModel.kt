@@ -3,14 +3,16 @@ package com.randalljuan.proyecto3_mobile_b95212_b97452.data.model
 import com.google.gson.annotations.SerializedName
 
 data class VaccinationModel (
-    @SerializedName("VaccineType")
+    @SerializedName("idCard")
+    val idCard: String?,
+    @SerializedName("vaccinationType")
     val vaccinationType: String?,
-    @SerializedName("FullName")
+    @SerializedName("fullName")
     val fullname: String?,
-    @SerializedName("Description")
+    @SerializedName("description")
     val description: String?,
-    @SerializedName("LattestVaccineDate")
+    @SerializedName("applicationDate")
     val latestVaccineDate: String?,
-    @SerializedName("NextVaccineDate")
+    @SerializedName("nextVaccinationDate")
     val nextVaccineDate: String?
 )
