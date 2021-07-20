@@ -13,8 +13,7 @@ import com.randalljuan.proyecto3_mobile_b95212_b97452.R
 import com.randalljuan.proyecto3_mobile_b95212_b97452.data.model.VaccinationModel
 
 class VaccinationAdapter (private val vaccines: List<VaccinationModel>,
-                          private var onVaccinesClickListener: VaccinationAdapter.VaccinesClickListener
-):
+                          private var onVaccinesClickListener: VaccinationAdapter.VaccinesClickListener):
     RecyclerView.Adapter<VaccinationAdapter.VaccinationViewHolder>() {
 
     interface VaccinesClickListener {
@@ -35,7 +34,6 @@ class VaccinationAdapter (private val vaccines: List<VaccinationModel>,
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VaccinationViewHolder {
        val item=LayoutInflater.from(parent.context)
            .inflate(R.layout.vaccine_item,parent,false) as CardView
-
         return VaccinationViewHolder(item)
     }
 
@@ -44,8 +42,6 @@ class VaccinationAdapter (private val vaccines: List<VaccinationModel>,
         holder.item.setOnClickListener{
             onVaccinesClickListener.onVaccinesClicked(position)
         }
-
-
         holder.bindVaccination(currentItem)
     }
 
