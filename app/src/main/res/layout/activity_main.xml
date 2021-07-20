@@ -49,7 +49,7 @@
             android:hint="@string/tv_id_card"
             android:inputType="textPersonName"
             android:padding="10dp"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textColorHint="@color/black"
             android:textSize="21sp" />
 
@@ -65,7 +65,7 @@
             android:hint="@string/tv_password"
             android:inputType="textPassword"
             android:padding="10dp"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textColorHint="@color/black"
             android:textSize="21sp" />
 
