@@ -10,7 +10,6 @@ import com.randalljuan.proyecto3_mobile_b95212_b97452.adapter.VaccinationAdapter
 import com.randalljuan.proyecto3_mobile_b95212_b97452.data.model.VaccinationModel
 
 private lateinit var recView : RecyclerView
-
 private lateinit var vaccinesList: List<VaccinationModel>
 
 class VaccineActivity : AppCompatActivity() {

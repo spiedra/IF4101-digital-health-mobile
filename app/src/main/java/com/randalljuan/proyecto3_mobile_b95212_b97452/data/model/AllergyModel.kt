@@ -4,11 +4,11 @@ import com.google.gson.annotations.SerializedName
 
 data class AllergyModel (
     @SerializedName("AllergyType")
-    val patientCard: String?,
+    val allergyType: String?,
     @SerializedName("FullName")
     val fullname: String?,
     @SerializedName("Description")
     val description: String?,
     @SerializedName("DiagnosticDate")
-    val latestVaccineDate: String?
+    val diagnosticDate: String?
     )

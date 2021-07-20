@@ -4,7 +4,7 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/vaccineCardView"
+    android:id="@+id/allergyCardView"
     android:layout_margin="5dp"
     card_view:cardBackgroundColor="#81C784"
     card_view:cardCornerRadius="12dp"
@@ -19,7 +19,7 @@
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:id="@+id/ivVaccine"
+            android:id="@+id/ivAllergy"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
@@ -29,19 +29,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/lblVaccinationType"
-            android:layout_toEndOf="@+id/ivVaccine"
-            android:layout_toRightOf="@+id/ivVaccine"
+            android:id="@+id/lblAllergyType"
+            android:layout_toEndOf="@+id/ivAllergy"
+            android:layout_toRightOf="@+id/ivAllergy"
             android:layout_alignParentTop="true"
             android:textSize="25sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/lblVaccinationDate"
-            android:layout_toEndOf="@+id/ivVaccine"
-            android:layout_toRightOf="@+id/ivVaccine"
-            android:layout_below="@+id/lblVaccinationType"
+            android:id="@+id/lblAllergyDate"
+            android:layout_toEndOf="@+id/ivAllergy"
+            android:layout_toRightOf="@+id/ivAllergy"
+            android:layout_below="@+id/lblAllergyType"
             android:textSize="20sp" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
