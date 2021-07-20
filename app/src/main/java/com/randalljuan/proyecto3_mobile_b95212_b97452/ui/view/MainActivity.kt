@@ -34,8 +34,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener{
        // this.setOnClickListeners(btnLogIn)
        // this.setOnClickListeners(btnSignUp)
     }
-
-
     override fun onClick(v: View) {
         /*
         when (v.id) {

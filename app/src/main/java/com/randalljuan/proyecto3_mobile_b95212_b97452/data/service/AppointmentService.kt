@@ -9,6 +9,7 @@ class AppointmentService {
     private val retrofit = RetrofitHelper.getRetrofit()
 
     fun getAppointments(idCard: String){
+        /*
         val service = retrofit.create(DigitalHealthApiClient::class.java)
         val response = service.getAppointmentByCard(idCard)
 
@@ -21,5 +22,7 @@ class AppointmentService {
             )
             Log.d("Pretty Printed JSON :", prettyJson)
         }
+
+         */
     }
 }

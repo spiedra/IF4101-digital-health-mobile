@@ -25,13 +25,7 @@ class PatientService {
                 }else{
                     Log.d("Pretty Printed JSON else:", "f")
                 }
-//                Log.d("Pretty Printed JSON else:", response.body()?.idCard!!)
-//                val body = response?.body()
-//                val gson = GsonBuilder().create()
-                //val patientList: List<PatientModel> = gson.fromJson(body, Array<PatientModel>::class.java).toList()
-
             }
-
             override fun onFailure(call: Call<List<PatientModel>>, t: Throwable) {
                 Log.d("Pretty Printed JSON FAILURE:", t.cause.toString() + "  "+ t.message + "  "+t.localizedMessage)
             }
