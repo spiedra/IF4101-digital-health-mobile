@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.randalljuan.proyecto3_mobile_b95212_b97452">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:networkSecurityConfig="@xml/network_security_config"
-        android:theme="@style/Theme.Proyecto3_mobile_B95212_B97452">
+        android:theme="@style/Theme.Proyecto3_mobile_B95212_B97452"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ui.view.VaccineDetailsActivity"
+            android:label="@string/title_activity_vaccine_details"
+            android:theme="@style/Theme.Proyecto3_mobile_B95212_B97452.NoActionBar"></activity>
         <activity android:name=".ui.view.AppointmentActivity" />
         <activity android:name=".ui.view.VaccineActivity" />
         <activity android:name=".ui.view.AllergyActivity" />

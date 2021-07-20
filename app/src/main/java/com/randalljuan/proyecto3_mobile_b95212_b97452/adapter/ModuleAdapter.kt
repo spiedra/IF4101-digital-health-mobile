@@ -33,7 +33,7 @@ class ModuleAdapter(private  var moduleModelList: List<ModuleModel>,
                     "Vacunas" ->binding.ivModule.setImageResource(R.drawable.ic_vacuna)
                     "Alergias" ->binding.ivModule.setImageResource(R.drawable.ic_alergias)
                 }
-                binding.ivModule.setOnClickListener{
+                holder.itemView.setOnClickListener{
                     optionsMenuClickListener.onOptionsMenuClicked(position)
                 }
             }
