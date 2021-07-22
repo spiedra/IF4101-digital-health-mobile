@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/shrek"
+    tools:context="com.randalljuan.proyecto3_mobile_b95212_b97452.ui.view.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/main_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/editTextSignUpIdCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:autofillHints="@string/tv_id_card"
+            android:background="@color/white"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="@string/tv_id_card"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:autofillHints="@string/et_name"
+            android:background="@color/white"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="@string/et_name"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textSize="16sp"
+            tools:text="@string/et_name" />
+
+        <EditText
+            android:id="@+id/editTextLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:autofillHints="@string/tv_last_name"
+            android:background="@color/white"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="@string/tv_last_name"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textSize="16sp"
+            tools:text="@string/tv_last_name" />
+
+        <EditText
+            android:id="@+id/editTextTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:autofillHints="@string/tv_password"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="@string/tv_password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textSize="16sp"
+            tools:text="@string/tv_password" />
+
+        <EditText
+            android:id="@+id/editTextAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:autofillHints="@string/tv_last_name"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="@string/tv_age"
+            android:inputType="number"
+            android:padding="10dp"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/spinnerBloodType"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:entries="@array/bloodTypes"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.434"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView52"
+            app:layout_constraintVertical_bias="0.061" />
+
+        <EditText
+            android:id="@+id/tvCivilStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:autofillHints="@string/tv_civil_status"
+            android:background="@color/white"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="@string/tv_civil_status"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textSize="16sp"
+            tools:text="@string/tv_civil_status" />
+
+        <EditText
+            android:id="@+id/tvAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:autofillHints="@string/tv_address"
+            android:background="@color/white"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="@string/tv_address"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textSize="16sp"
+            tools:text="@string/tv_address" />
+
+        <EditText
+            android:id="@+id/tvPhone1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:autofillHints="@string/tv_phone_1"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="@string/tv_phone_1"
+            android:inputType="phone"
+            android:padding="10dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/tvPhone2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:autofillHints="@string/tv_phone_2"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="@string/tv_phone_2"
+            android:inputType="phone"
+            android:padding="10dp"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_update"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:color="@color/white"
+            android:text="@string/btn_sign_up"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            tools:text="@string/btn_confirm" />
+
+    </LinearLayout>
+
+</RelativeLayout>

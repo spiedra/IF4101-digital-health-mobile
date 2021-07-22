@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Proyecto3_mobile_B95212_B97452</string>
+    <string name="app_name">Digital Health</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="gestion">Gestión de datos</string>
     <string name="citas">Citas</string>
@@ -13,6 +13,17 @@
     <string name="btn_sign_up">Sign Up</string>
     <string name="image_profile">Profile</string>
     <string name="title_activity_vaccine_details">VaccineDetailsActivity</string>
+    <string name="et_name">Name</string>
+    <string name="btn_update">Update</string>
+    <string name="tv_last_name">Last Name</string>
+    <string name="tv_age">Age</string>
+    <string name="tv_civil_status">Civil status</string>
+    <string name="tv_address">Address</string>
+    <string name="tv_phone_1">Phone number 1</string>
+    <string name="tv_phone_2">Phone number 2</string>
+    <string name="btn_confirm">Confirm</string>
+    <string name="tv_show_personal_info">Ver información</string>
+    <string name="tv_update_personal_info">Actualizar información</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -24,4 +35,14 @@
     <string name="title_activity_allergy_details">AllergyDetailsActivity</string>
     <string name="title_activity_appointment_details">AppointmentDetailsActivity</string>
     <string name="title_activity_show_personallnfo">ShowPersonallnfoActivity</string>
+
+    <!-- Spinner -->
+    <string-array name="bloodTypes">
+        <item>Select a blood type</item>
+        <item>A+</item>
+        <item>O-</item>
+        <item>B-</item>
+        <item>Ab+</item>
+        <item>O+</item>
+    </string-array>
 </resources>
