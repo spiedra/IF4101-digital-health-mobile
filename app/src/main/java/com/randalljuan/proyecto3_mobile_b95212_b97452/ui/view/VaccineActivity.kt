@@ -23,8 +23,6 @@ private lateinit var recView: RecyclerView
 private lateinit var vaccinesList2: MutableList<VaccinationModel>
 
 class VaccineActivity : AppCompatActivity() {
-
-
     val retrofit = RetrofitHelper.getRetrofit()
     private var vaccinesList: List<VaccinationModel>? = null
 

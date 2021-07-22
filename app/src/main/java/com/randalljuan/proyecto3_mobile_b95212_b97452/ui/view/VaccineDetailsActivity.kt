@@ -13,8 +13,8 @@ class VaccineDetailsActivity : AppCompatActivity() {
 
         val parameters = this.intent.extras
         if (parameters != null) {
-            val tvVaccineType=(findViewById(R.id.tvVaccineType) as TextView).setText(parameters.getString("VaccineType"))
-            val tvLatestDate=(findViewById(R.id.tvDiagnosticDate) as TextView).setText(parameters.getString("LatestDate"))
+            val tvVaccineType=(findViewById(R.id.tvSpecialty) as TextView).setText(parameters.getString("VaccineType"))
+            val tvLatestDate=(findViewById(R.id.tvHealthCenter) as TextView).setText(parameters.getString("LatestDate"))
             val tvnextDate=(findViewById(R.id.tvNextDate) as TextView).setText(parameters.getString("NextDate"))
             val tvdescription=(findViewById(R.id.tvDescriptionAllergy) as TextView).setText(parameters.getString("Description"))
         }

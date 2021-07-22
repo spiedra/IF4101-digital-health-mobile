@@ -17,7 +17,7 @@ class AllergyDetailsActivity : AppCompatActivity() {
         val parameters = this.intent.extras
         if (parameters != null) {
             val tvVaccineType=(findViewById(R.id.tvAlergyType) as TextView).setText(parameters.getString("AllergyType"))
-            val tvDiagnosticDate=(findViewById(R.id.tvDiagnosticDate) as TextView).setText(parameters.getString("DiagnosticDate"))
+            val tvDiagnosticDate=(findViewById(R.id.tvHealthCenter) as TextView).setText(parameters.getString("DiagnosticDate"))
             val tvdescription=(findViewById(R.id.tvDescriptionAllergy) as TextView).setText(parameters.getString("Description"))
         }
     }
