@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.randalljuan.proyecto3_mobile_b95212_b97452.R
@@ -32,7 +33,10 @@ class AppointmentActivity : AppCompatActivity() {
                 call: Call<List<AppointmentModel>>,
                 response: Response<List<AppointmentModel>>
             ) {
-
+                var aux:List<AppointmentModel>?=response.body()
+                if(aux!=null) {
+                    isEmpty(aux)
+                }
                 recView.apply {
                     val adaptador = AppointmentAdapter(response.body()!!,
                         object : AppointmentAdapter.AppointmentClickListener {
@@ -76,5 +80,10 @@ class AppointmentActivity : AppCompatActivity() {
                 Log.d("FAILURE:", t.cause.toString() + "  " + t.message + "  " + t.localizedMessage)
             }
         })
+    }
+    fun isEmpty(lista: List<AppointmentModel>){
+        if(lista.isEmpty()){
+            Toast.makeText(this,"No se han encontrado citas", Toast.LENGTH_LONG).show()
+        }
     }
 }

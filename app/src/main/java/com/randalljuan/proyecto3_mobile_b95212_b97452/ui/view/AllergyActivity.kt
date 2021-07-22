@@ -75,7 +75,7 @@ class AllergyActivity : AppCompatActivity() {
     }
     fun isEmpty(lista: List<AllergyModel>){
         if(lista.isEmpty()){
-            Toast.makeText(this,"No se han encontrado alergias", Toast.LENGTH_LONG)
+            Toast.makeText(this,"No se han encontrado alergias", Toast.LENGTH_LONG).show()
         }
     }
 }
