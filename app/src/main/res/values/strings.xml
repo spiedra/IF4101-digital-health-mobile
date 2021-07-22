@@ -15,6 +15,7 @@
     <string name="title_activity_vaccine_details">VaccineDetailsActivity</string>
     <string name="et_name">Name</string>
     <string name="btn_update">Update</string>
+    <string name="update_personal_info_tittle">Update Personal Information</string>
     <string name="tv_last_name">Last Name</string>
     <string name="tv_age">Age</string>
     <string name="tv_civil_status">Civil status</string>
