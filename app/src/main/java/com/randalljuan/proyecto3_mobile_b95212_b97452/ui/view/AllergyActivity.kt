@@ -24,9 +24,8 @@ class AllergyActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_allergy)
         recView =  findViewById(R.id.rv_allergy_list)
-
         val call =
-            retrofit.create(DigitalHealthApiClient::class.java).getAllergyByCard("1-1818-0999")
+            retrofit.create(DigitalHealthApiClient::class.java).getAllergyByCard("4-0123-0876")
         call.enqueue(object : Callback<List<AllergyModel>> {
             override fun onResponse(
                 call: Call<List<AllergyModel>>,
@@ -69,7 +68,6 @@ class AllergyActivity : AppCompatActivity() {
                     recView.adapter = adaptador
                 }
             }
-
             override fun onFailure(call: Call<List<AllergyModel>>, t: Throwable) {
                 Log.d("FAILURE:", t.cause.toString() + "  " + t.message + "  " + t.localizedMessage)
             }
