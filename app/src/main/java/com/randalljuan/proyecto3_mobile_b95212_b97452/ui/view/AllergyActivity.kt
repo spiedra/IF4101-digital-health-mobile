@@ -1,4 +1,4 @@
-package com.randalljuan. proyecto3_mobile_b95212_b97452.ui.view
+package com.randalljuan.proyecto3_mobile_b95212_b97452.ui.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -12,7 +12,6 @@ import com.randalljuan.proyecto3_mobile_b95212_b97452.adapter.AllergyAdapter
 import com.randalljuan.proyecto3_mobile_b95212_b97452.core.RetrofitHelper
 import com.randalljuan.proyecto3_mobile_b95212_b97452.data.model.AllergyModel
 import com.randalljuan.proyecto3_mobile_b95212_b97452.data.service.DigitalHealthApiClient
-import com.randalljuan.proyecto3_mobile_b95212_b97452.ui.view.AllergyDetailsActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -32,7 +31,7 @@ class AllergyActivity : AppCompatActivity() {
                 call: Call<List<AllergyModel>>,
                 response: Response<List<AllergyModel>>
             ) {
-                var aux: List<AllergyModel>?=response.body()
+                val aux: List<AllergyModel>?=response.body()
                 if (aux != null) {
                     isEmpty(aux)
                 }

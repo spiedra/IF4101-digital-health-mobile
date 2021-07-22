@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.randalljuan.proyecto3_mobile_b95212_b97452.R
@@ -64,7 +65,7 @@ class VaccineActivity : AppCompatActivity() {
     }
     fun isEmpty(lista: List<VaccinationModel>){
         if(lista.isEmpty()){
-            Toast.makeText(this,"No se han encontrado alergias", Toast.LENGTH_LONG).show()
+            Toast.makeText(this,"No se han encontrado vacunas", Toast.LENGTH_LONG).show()
         }
     }
 }
