@@ -3,6 +3,7 @@ package com.randalljuan.proyecto3_mobile_b95212_b97452.ui.view
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.randalljuan.proyecto3_mobile_b95212_b97452.R
 import com.randalljuan.proyecto3_mobile_b95212_b97452.core.RetrofitHelper
@@ -37,6 +38,7 @@ class ShowPersonallnfoActivity : AppCompatActivity() {
         tvNumero1=findViewById(R.id.tvNumero1P)
         tvNumero2=findViewById(R.id.tvNumero2P)
         //
+        Toast.makeText(this,SessionManager.getIdCard(),Toast.LENGTH_SHORT).show()
         getPersonalInformation(SessionManager.getIdCard())
     }
     private fun getPersonalInformation(idCard: String) {

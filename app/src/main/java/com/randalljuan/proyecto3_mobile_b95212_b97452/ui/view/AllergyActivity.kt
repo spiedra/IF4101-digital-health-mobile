@@ -12,6 +12,7 @@ import com.randalljuan.proyecto3_mobile_b95212_b97452.adapter.AllergyAdapter
 import com.randalljuan.proyecto3_mobile_b95212_b97452.core.RetrofitHelper
 import com.randalljuan.proyecto3_mobile_b95212_b97452.data.model.AllergyModel
 import com.randalljuan.proyecto3_mobile_b95212_b97452.data.service.DigitalHealthApiClient
+import com.randalljuan.proyecto3_mobile_b95212_b97452.utility.SessionManager
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -25,7 +26,7 @@ class AllergyActivity : AppCompatActivity() {
         setContentView(R.layout.activity_allergy)
         recView =  findViewById(R.id.rv_allergy_list)
         val call =
-            retrofit.create(DigitalHealthApiClient::class.java).getAllergyByCard("4-0123-0876")
+            retrofit.create(DigitalHealthApiClient::class.java).getAllergyByCard(SessionManager.getIdCard())
         call.enqueue(object : Callback<List<AllergyModel>> {
             override fun onResponse(
                 call: Call<List<AllergyModel>>,
