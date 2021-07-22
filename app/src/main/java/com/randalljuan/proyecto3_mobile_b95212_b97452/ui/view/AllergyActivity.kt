@@ -12,6 +12,7 @@ import com.randalljuan.proyecto3_mobile_b95212_b97452.adapter.AllergyAdapter
 import com.randalljuan.proyecto3_mobile_b95212_b97452.core.RetrofitHelper
 import com.randalljuan.proyecto3_mobile_b95212_b97452.data.model.AllergyModel
 import com.randalljuan.proyecto3_mobile_b95212_b97452.data.service.DigitalHealthApiClient
+import com.randalljuan.proyecto3_mobile_b95212_b97452.ui.view.AllergyDetailsActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -31,11 +32,10 @@ class AllergyActivity : AppCompatActivity() {
                 call: Call<List<AllergyModel>>,
                 response: Response<List<AllergyModel>>
             ) {
-                /*
-                if((response.body()){
-                    Toast.makeText(this@AllergyActivity,"No se han encontrado alergias",Toast.LENGTH_LONG)
+                var aux: List<AllergyModel>?=response.body()
+                if (aux != null) {
+                    isEmpty(aux)
                 }
-                 */
                 recView.apply {
                     val adaptador = AllergyAdapter(response.body()!!,
                         object : AllergyAdapter.AllergyClickListener {
@@ -45,15 +45,15 @@ class AllergyActivity : AppCompatActivity() {
                                     Intent(this@AllergyActivity, AllergyDetailsActivity::class.java)
                                 intent.putExtra(
                                     "AllergyType",
-                                    response.body()!![position]?.allergyType!!
+                                    response.body()!![position].allergyType!!
                                 )
                                 intent.putExtra(
                                     "DiagnosticDate",
-                                    response.body()!![position]?.diagnosticDate!!
+                                    response.body()!![position].diagnosticDate!!
                                 )
                                 intent.putExtra(
                                     "Description",
-                                    response.body()!![position]?.description!!
+                                    response.body()!![position].description!!
                                 )
                                 startActivity(intent)
                             }
@@ -73,6 +73,10 @@ class AllergyActivity : AppCompatActivity() {
             }
         })
     }
-
-
+    fun isEmpty(lista: List<AllergyModel>){
+        if(lista.isEmpty()){
+            Toast.makeText(this,"No se han encontrado alergias", Toast.LENGTH_LONG)
+        }
+    }
 }
+
