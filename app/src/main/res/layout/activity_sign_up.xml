@@ -113,7 +113,7 @@
             app:layout_constraintVertical_bias="0.061" />
 
         <EditText
-            android:id="@+id/editTextCivilStatus"
+            android:id="@+id/tvCivilStatus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -128,7 +128,7 @@
             tools:text="@string/tv_civil_status" />
 
         <EditText
-            android:id="@+id/editTextAddress"
+            android:id="@+id/tvAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -143,7 +143,7 @@
             tools:text="@string/tv_address" />
 
         <EditText
-            android:id="@+id/editTextPhone1"
+            android:id="@+id/tvPhone1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -156,7 +156,7 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/editTextPhone2"
+            android:id="@+id/tvPhone2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -169,7 +169,7 @@
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/btn_confirm"
+            android:id="@+id/btn_update"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="match_parent"
             android:layout_height="40dp"

@@ -30,23 +30,23 @@ class SignUpActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
-        this.btnConfirm = findViewById(R.id.btn_confirm)
+        this.btnConfirm = findViewById(R.id.btn_update)
         this.setOnClickListeners(btnConfirm)
     }
 
     override fun onClick(v: View) {
         when (v.id) {
-            R.id.btn_confirm -> {
+            R.id.btn_update -> {
                 tvIdCard = findViewById(R.id.editTextSignUpIdCard)
                 tvName = findViewById(R.id.editTextName)
                 tvLastName = findViewById(R.id.editTextLastName)
                 tvPassword = findViewById(R.id.editTextTextPassword)
                 tvAge = findViewById(R.id.editTextAge)
                 spiBloodType = findViewById(R.id.spinnerBloodType)
-                tvCivilStatus = findViewById(R.id.editTextCivilStatus)
-                tvAddress = findViewById(R.id.editTextAddress)
-                tvPhoneNumber1 = findViewById(R.id.editTextPhone1)
-                tvPhoneNumber2 = findViewById(R.id.editTextPhone2)
+                tvCivilStatus = findViewById(R.id.tvCivilStatus)
+                tvAddress = findViewById(R.id.tvAddress)
+                tvPhoneNumber1 = findViewById(R.id.tvPhone1)
+                tvPhoneNumber2 = findViewById(R.id.tvPhone2)
 
                 PatientService().signUp(
                     createRequestBody(

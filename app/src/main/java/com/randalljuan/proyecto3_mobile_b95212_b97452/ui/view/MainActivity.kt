@@ -16,8 +16,6 @@ import org.json.JSONObject
 import okhttp3.RequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
 
-//import okhttp3.RequestBody.Companion.toRequestBody
-
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var btnLogIn: Button

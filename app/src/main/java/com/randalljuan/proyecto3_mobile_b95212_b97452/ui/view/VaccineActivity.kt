@@ -24,8 +24,7 @@ private lateinit var vaccinesList2: MutableList<VaccinationModel>
 
 class VaccineActivity : AppCompatActivity() {
 
-
-    val retrofit = RetrofitHelper.getRetrofit()
+    private val retrofit = RetrofitHelper.getRetrofit()
     private var vaccinesList: List<VaccinationModel>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {

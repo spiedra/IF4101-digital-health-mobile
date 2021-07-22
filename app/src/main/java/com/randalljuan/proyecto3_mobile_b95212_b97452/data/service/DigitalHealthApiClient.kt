@@ -24,8 +24,8 @@ interface DigitalHealthApiClient {
     @POST("api/Patient/SignIn")
     fun signUpPatient(@Body params: RequestBody): Call<ResponseModel>
 
-    @PUT("/api/Patient/UpdatePersonalInformation")
-    fun updatePersonalInformation(@Body params: RequestBody)
+    @PUT("api/Patient/UpdatePersonalInformation")
+    fun updatePersonalInformation(@Body params: RequestBody): Call<ResponseModel>
 
     // Appointment
     @GET("api/Appointment/GetAppointmentByCard")
