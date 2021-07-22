@@ -3,12 +3,12 @@ package com.randalljuan.proyecto3_mobile_b95212_b97452.data.model
 import com.google.gson.annotations.SerializedName
 
 data class AllergyModel (
-    @SerializedName("AllergyType")
+    @SerializedName("allergyType")
     val allergyType: String?,
-    @SerializedName("FullName")
+    @SerializedName("fullName")
     val fullname: String?,
-    @SerializedName("Description")
+    @SerializedName("description")
     val description: String?,
-    @SerializedName("DiagnosticDate")
+    @SerializedName("diagnosticDate")
     val diagnosticDate: String?
     )
