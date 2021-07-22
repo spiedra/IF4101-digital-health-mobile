@@ -26,7 +26,8 @@ class GestionActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View) {
         when (v.id) {
             R.id.cvShowInfo -> {
-
+                val intent = Intent(this, ShowPersonallnfoActivity::class.java)
+                startActivity(intent)
             }
             R.id.cvUpdateInfo -> {
                 val intent = Intent(this, UpdatePersonalInfoActivity::class.java)
