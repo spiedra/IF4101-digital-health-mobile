@@ -9,6 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 import com.randalljuan.proyecto3_mobile_b95212_b97452.R
 import com.randalljuan.proyecto3_mobile_b95212_b97452.data.service.LoginService
+import com.randalljuan.proyecto3_mobile_b95212_b97452.utility.Utils
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import org.json.JSONObject
 //import okhttp3.MediaType.Companion.toMediaTypeOrNull
@@ -27,9 +28,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        val intent = Intent(this, MenuActivity::class.java)
-        startActivity(intent)
         this.btnLogIn = findViewById(R.id.btn_login)
         this.btnSignUp = findViewById(R.id.btn_sign_up)
         this.setOnClickListeners(btnLogIn)
@@ -48,7 +46,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 )
             }
             R.id.btn_sign_up -> {
-                Toast.makeText(this, "Sign in button has been pressed", Toast.LENGTH_SHORT).show()
+               Utils.startActivity(this, SignUpActivity::class.java)
             }
         }
     }

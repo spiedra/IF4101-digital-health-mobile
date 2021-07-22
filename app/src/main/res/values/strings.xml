@@ -13,6 +13,14 @@
     <string name="btn_sign_up">Sign Up</string>
     <string name="image_profile">Profile</string>
     <string name="title_activity_vaccine_details">VaccineDetailsActivity</string>
+    <string name="et_name">Name</string>
+    <string name="tv_last_name">Last Name</string>
+    <string name="tv_age">Age</string>
+    <string name="tv_civil_status">Civil status</string>
+    <string name="tv_address">Address</string>
+    <string name="tv_phone_1">Phone number 1</string>
+    <string name="tv_phone_2">Phone number 2</string>
+    <string name="btn_confirm">Confirm</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -22,4 +30,14 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_allergy_details">AllergyDetailsActivity</string>
+
+    <!-- Spinner -->
+    <string-array name="bloodTypes">
+        <item>Select a blood type</item>
+        <item>A+</item>
+        <item>O-</item>
+        <item>B-</item>
+        <item>Ab+</item>
+        <item>O+</item>
+    </string-array>
 </resources>

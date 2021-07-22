@@ -21,6 +21,7 @@
             android:name=".ui.view.VaccineDetailsActivity"
             android:label="@string/title_activity_vaccine_details"
             android:theme="@style/Theme.Proyecto3_mobile_B95212_B97452.NoActionBar" />
+        <activity android:name=".ui.view.SignUpActivity" />
         <activity android:name=".ui.view.AppointmentActivity" />
         <activity android:name=".ui.view.VaccineActivity" />
         <activity android:name=".ui.view.AllergyActivity" />
