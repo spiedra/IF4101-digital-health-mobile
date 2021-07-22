@@ -6,10 +6,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 object RetrofitHelper {
     fun getRetrofit(): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("http://192.168.0.6/apiLocalhost/")
+            .baseUrl("https://digitalhealthapi.azurewebsites.net/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
 }
-
-//192.168.0.5
