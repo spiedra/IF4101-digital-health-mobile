@@ -21,18 +21,18 @@ interface DigitalHealthApiClient {
     @GET("api/Patient/GetPersonalInformation")
     fun getPersonalInformation(@Query("idCard") patientCardId: String): Call<PatientModel>
 
-    @PUT("/api/Patient/UpdatePersonalInformation")
+    @PUT("api/Patient/UpdatePersonalInformation")
     fun updatePersonalInformation(@Body params: RequestBody)
 
     // Appointment
-    @GET("/api/Appointment/GetAppointmentByCard")
+    @GET("api/Appointment/GetAppointmentByCard")
     fun getAppointmentByCard(@Query("patientCardId") patientCardId: String): Response<AppointmentModel>
 
     //Vaccination
-    @GET("/api/Vaccination/GetPatientVaccines")
-    fun getVaccinationByCard(@Query("IdCard") IdCard: String): Response<VaccinationModel>
+    @GET("api/Vaccination/GetPatientVaccines")
+    fun getVaccinationByCard(@Query("IdCard") IdCard: String): Call<List<VaccinationModel>>
 
     //Allergy
-    @GET("/api/Allergy/GetPatientAllergies")
-    fun getAllergyByCard(@Query("IdCard") IdCard: String): Response<AllergyModel>
+    @GET("api/Allergy/GetPatientAllergies")
+    fun getAllergyByCard(@Query("IdCard") IdCard: String): Call<List<AllergyModel>>
 }
