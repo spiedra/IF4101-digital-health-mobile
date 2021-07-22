@@ -14,9 +14,13 @@
         android:theme="@style/Theme.Proyecto3_mobile_B95212_B97452"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ui.view.ShowPersonallnfoActivity"
+            android:label="@string/title_activity_show_personallnfo"
+            android:theme="@style/Theme.Proyecto3_mobile_B95212_B97452.NoActionBar"></activity>
+        <activity
             android:name=".ui.view.AppointmentDetailsActivity"
             android:label="@string/title_activity_appointment_details"
-            android:theme="@style/Theme.Proyecto3_mobile_B95212_B97452.NoActionBar"></activity>
+            android:theme="@style/Theme.Proyecto3_mobile_B95212_B97452.NoActionBar" />
         <activity
             android:name=".ui.view.AllergyDetailsActivity"
             android:label="@string/title_activity_allergy_details"

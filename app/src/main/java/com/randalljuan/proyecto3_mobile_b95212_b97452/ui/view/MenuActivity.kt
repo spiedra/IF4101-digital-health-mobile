@@ -45,7 +45,7 @@ class MenuActivity : AppCompatActivity() {
     }
 
     private fun showGestionModule() {
-        val intent = Intent(this, GestionActivity::class.java)
+        val intent = Intent(this, ShowPersonallnfoActivity::class.java)
         startActivity(intent)
     }
 

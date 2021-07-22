@@ -23,4 +23,5 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_allergy_details">AllergyDetailsActivity</string>
     <string name="title_activity_appointment_details">AppointmentDetailsActivity</string>
+    <string name="title_activity_show_personallnfo">ShowPersonallnfoActivity</string>
 </resources>
