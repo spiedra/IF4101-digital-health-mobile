@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.randalljuan.proyecto3_mobile_b95212_b97452.R
 import com.randalljuan.proyecto3_mobile_b95212_b97452.adapter.VaccinationAdapter
 import com.randalljuan.proyecto3_mobile_b95212_b97452.core.RetrofitHelper
+import com.randalljuan.proyecto3_mobile_b95212_b97452.data.model.AllergyModel
+import com.randalljuan.proyecto3_mobile_b95212_b97452.data.model.AppointmentModel
 import com.randalljuan.proyecto3_mobile_b95212_b97452.data.model.VaccinationModel
 import com.randalljuan.proyecto3_mobile_b95212_b97452.data.service.DigitalHealthApiClient
 import com.randalljuan.proyecto3_mobile_b95212_b97452.data.service.VaccinationService
@@ -38,6 +40,10 @@ class VaccineActivity : AppCompatActivity() {
                 call: Call<List<VaccinationModel>>,
                 response: Response<List<VaccinationModel>>
             ) {
+                var aux:List<VaccinationModel>?=response.body()
+                if(aux!=null) {
+                    isEmpty(aux)
+                }
                 recView.apply {
                     val adaptador = VaccinationAdapter(response.body()!!,object : VaccinationAdapter.VaccinesClickListener {
                         override fun onVaccinesClicked(position: Int) {
@@ -60,5 +66,10 @@ class VaccineActivity : AppCompatActivity() {
                 Log.d("FAILURE:", t.cause.toString() + "  " + t.message + "  " + t.localizedMessage)
             }
         })
+    }
+    fun isEmpty(lista: List<VaccinationModel>){
+        if(lista.isEmpty()){
+            Toast.makeText(this,"No se han encontrado alergias", Toast.LENGTH_LONG).show()
+        }
     }
 }
