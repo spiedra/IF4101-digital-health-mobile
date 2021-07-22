@@ -29,7 +29,7 @@ interface DigitalHealthApiClient {
 
     // Appointment
     @GET("api/Appointment/GetAppointmentByCard")
-    fun getAppointmentByCard(@Query("patientCardId") patientCardId: String): Response<AppointmentModel>
+    fun getAppointmentByCard(@Query("patientCardId") patientCardId: String): Call<List<AppointmentModel>>
 
     //Vaccination
     @GET("api/Vaccination/GetPatientVaccines")

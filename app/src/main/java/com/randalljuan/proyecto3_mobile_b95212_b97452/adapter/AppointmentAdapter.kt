@@ -8,7 +8,6 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.randalljuan.proyecto3_mobile_b95212_b97452.R
-import com.randalljuan.proyecto3_mobile_b95212_b97452.data.model.AllergyModel
 import com.randalljuan.proyecto3_mobile_b95212_b97452.data.model.AppointmentModel
 
 class AppointmentAdapter(private val appointments:List<AppointmentModel>, private var OnAppointmentClickListener :AppointmentAdapter.AppointmentClickListener)
@@ -24,7 +23,7 @@ class AppointmentAdapter(private val appointments:List<AppointmentModel>, privat
         var ivAppointment= item.findViewById(R.id.iv_appointment) as ImageView
 
         fun bindAppointment(appointment: AppointmentModel){
-            ivAppointment.setImageResource(R.drawable.ic_allergy)
+            ivAppointment.setImageResource(R.drawable.ic_medical_app)
             lblDate.text=appointment.date
             lblHealthCenter.text=appointment.healthCenter
         }
@@ -33,7 +32,7 @@ class AppointmentAdapter(private val appointments:List<AppointmentModel>, privat
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AppointmentViewHolder {
         val item= LayoutInflater.from(parent.context)
             .inflate(R.layout.appointment_item,parent,false) as CardView
-        return AppointmentAdapter.AppointmentViewHolder(item)
+        return AppointmentViewHolder(item)
     }
 
     override fun onBindViewHolder(holder: AppointmentViewHolder, position: Int) {

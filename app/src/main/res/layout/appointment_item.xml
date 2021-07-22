@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:id="@+id/vaccineCardView"
     android:layout_margin="5dp"
-    card_view:cardBackgroundColor="#22D4A1"
+    card_view:cardBackgroundColor="@color/shrek"
     card_view:cardCornerRadius="12dp"
     card_view:cardElevation="3dp"
     card_view:contentPadding="4dp" >
@@ -33,7 +33,7 @@
             android:layout_toEndOf="@+id/iv_appointment"
             android:layout_toRightOf="@+id/iv_appointment"
             android:layout_alignParentTop="true"
-            android:textSize="25sp"/>
+            android:textSize="22sp"/>
 
         <TextView
             android:layout_width="wrap_content"
