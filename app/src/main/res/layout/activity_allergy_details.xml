@@ -86,14 +86,12 @@
         android:id="@+id/tvHealthCenter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="60dp"
+        android:layout_marginStart="16dp"
         android:layout_marginBottom="116dp"
         android:fontFamily="sans-serif"
         android:text="sin fecha reciente"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/tvDescriptionAllergy"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.978"
         app:layout_constraintStart_toEndOf="@+id/textView6" />
 
     <TextView
