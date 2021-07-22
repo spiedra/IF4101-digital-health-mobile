@@ -11,6 +11,7 @@ import com.randalljuan.proyecto3_mobile_b95212_b97452.core.RetrofitHelper
 import com.randalljuan.proyecto3_mobile_b95212_b97452.data.model.PatientModel
 import com.randalljuan.proyecto3_mobile_b95212_b97452.data.service.DigitalHealthApiClient
 import com.randalljuan.proyecto3_mobile_b95212_b97452.data.service.PatientService
+import com.randalljuan.proyecto3_mobile_b95212_b97452.utility.SessionManager
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
@@ -35,14 +36,14 @@ class UpdatePersonalInfoActivity : AppCompatActivity(), View.OnClickListener {
         tvAddress = findViewById(R.id.tvAddress)
         tvPhone1 = findViewById(R.id.tvPhone1)
         tvPhone2 = findViewById(R.id.tvPhone2)
-        getPersonalInformation("1-1818-0555")
+        getPersonalInformation(SessionManager.getIdCard())
         setOnClickListeners(btnUpdate)
     }
 
     override fun onClick(v: View) {
         when (v.id) {
             R.id.btn_update -> {
-                PatientService().updatePatien(createRequestBody("1-1818-0555", tvCivilStatus.text.toString()
+                PatientService().updatePatient(createRequestBody("1-1818-0555", tvCivilStatus.text.toString()
                     , tvAddress.text.toString(), tvPhone1.text.toString(), tvPhone2.text.toString()),this)
             }
         }

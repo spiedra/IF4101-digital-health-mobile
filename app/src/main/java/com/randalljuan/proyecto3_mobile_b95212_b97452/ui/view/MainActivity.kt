@@ -1,18 +1,16 @@
 package com.randalljuan.proyecto3_mobile_b95212_b97452.ui.view
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 import com.randalljuan.proyecto3_mobile_b95212_b97452.R
 import com.randalljuan.proyecto3_mobile_b95212_b97452.data.service.LoginService
+import com.randalljuan.proyecto3_mobile_b95212_b97452.utility.SessionManager
 import com.randalljuan.proyecto3_mobile_b95212_b97452.utility.Utils
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import org.json.JSONObject
-//import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
 
@@ -36,6 +34,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn_login -> {
                 tvIdCard = findViewById(R.id.tv_id_card)
                 tvPassword = findViewById(R.id.tv_password)
+                SessionManager.setIdCard(tvIdCard.text.toString())
                 LoginService().validatePatientLogIn(
                     createRequestBody(
                         tvIdCard.text.toString(),

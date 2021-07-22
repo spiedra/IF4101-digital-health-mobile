@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.randalljuan.proyecto3_mobile_b95212_b97452.R
 import com.randalljuan.proyecto3_mobile_b95212_b97452.data.model.AppointmentModel
 
-class AppointmentAdapter(private val appointments:List<AppointmentModel>, private var OnAppointmentClickListener :AppointmentAdapter.AppointmentClickListener)
+class AppointmentAdapter(private val appointments:List<AppointmentModel>, private var OnAppointmentClickListener :AppointmentClickListener)
     : RecyclerView.Adapter<AppointmentAdapter.AppointmentViewHolder>() {
 
     interface AppointmentClickListener {
@@ -18,9 +18,9 @@ class AppointmentAdapter(private val appointments:List<AppointmentModel>, privat
     }
 
     class AppointmentViewHolder(val item: View): RecyclerView.ViewHolder(item){
-        val lblDate= item.findViewById(R.id.lblAppointmentDate) as TextView
-        val lblHealthCenter= item.findViewById(R.id.lblHealthCenter) as TextView
-        var ivAppointment= item.findViewById(R.id.iv_appointment) as ImageView
+        private val lblDate= item.findViewById(R.id.lblAppointmentDate) as TextView
+        private val lblHealthCenter= item.findViewById(R.id.lblHealthCenter) as TextView
+        private var ivAppointment= item.findViewById(R.id.iv_appointment) as ImageView
 
         fun bindAppointment(appointment: AppointmentModel){
             ivAppointment.setImageResource(R.drawable.ic_medical_app)

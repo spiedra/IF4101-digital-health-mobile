@@ -4,16 +4,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.cardview.widget.CardView
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.randalljuan.proyecto3_mobile_b95212_b97452.R
 import com.randalljuan.proyecto3_mobile_b95212_b97452.data.model.VaccinationModel
 
 class VaccinationAdapter (private val vaccines: List<VaccinationModel>,
-                          private var onVaccinesClickListener: VaccinationAdapter.VaccinesClickListener):
+                          private var onVaccinesClickListener: VaccinesClickListener):
     RecyclerView.Adapter<VaccinationAdapter.VaccinationViewHolder>() {
 
     interface VaccinesClickListener {
@@ -21,9 +19,9 @@ class VaccinationAdapter (private val vaccines: List<VaccinationModel>,
     }
 
     class VaccinationViewHolder(val item: View): RecyclerView.ViewHolder(item){
-        val lblVaccinationType= item.findViewById(R.id.lblVaccinationType) as TextView
-        val lblVaccinationDate= item.findViewById(R.id.lblVaccinationDate) as TextView
-        var ivVaccine= item.findViewById(R.id.ivVaccine) as ImageView
+        private val lblVaccinationType= item.findViewById(R.id.lblVaccinationType) as TextView
+        private val lblVaccinationDate= item.findViewById(R.id.lblVaccinationDate) as TextView
+        private var ivVaccine= item.findViewById(R.id.ivVaccine) as ImageView
 
         fun bindVaccination(vaccination:VaccinationModel){
             ivVaccine.setImageResource(R.drawable.ic_vaccine)

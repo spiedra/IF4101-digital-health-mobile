@@ -9,9 +9,8 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.randalljuan.proyecto3_mobile_b95212_b97452.R
 import com.randalljuan.proyecto3_mobile_b95212_b97452.data.model.AllergyModel
-import com.randalljuan.proyecto3_mobile_b95212_b97452.data.model.VaccinationModel
 
-class AllergyAdapter (private val allergies:List<AllergyModel>, private var OnAllergiesClickListener :AllergyAdapter.AllergyClickListener)
+class AllergyAdapter (private val allergies:List<AllergyModel>, private var OnAllergiesClickListener : AllergyClickListener)
     :RecyclerView.Adapter<AllergyAdapter.AllergyViewHolder>(){
 
     interface AllergyClickListener {
@@ -19,9 +18,9 @@ class AllergyAdapter (private val allergies:List<AllergyModel>, private var OnAl
     }
 
     class AllergyViewHolder(val item: View): RecyclerView.ViewHolder(item){
-        val lblAllergyType= item.findViewById(R.id.lblAllergyType) as TextView
-        val lblAllergyDate= item.findViewById(R.id.lblAllergyDate) as TextView
-        var ivAllergy= item.findViewById(R.id.ivAllergy) as ImageView
+        private val lblAllergyType= item.findViewById(R.id.lblAllergyType) as TextView
+        private val lblAllergyDate= item.findViewById(R.id.lblAllergyDate) as TextView
+        private var ivAllergy= item.findViewById(R.id.ivAllergy) as ImageView
 
         fun bindVaccination(allergy: AllergyModel){
             ivAllergy.setImageResource(R.drawable.ic_allergy)

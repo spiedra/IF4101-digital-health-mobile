@@ -1,12 +1,9 @@
 package com.randalljuan.proyecto3_mobile_b95212_b97452.ui.view
 
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.method.MultiTapKeyListener
 import android.util.Log
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.randalljuan.proyecto3_mobile_b95212_b97452.R
@@ -14,17 +11,15 @@ import com.randalljuan.proyecto3_mobile_b95212_b97452.adapter.VaccinationAdapter
 import com.randalljuan.proyecto3_mobile_b95212_b97452.core.RetrofitHelper
 import com.randalljuan.proyecto3_mobile_b95212_b97452.data.model.VaccinationModel
 import com.randalljuan.proyecto3_mobile_b95212_b97452.data.service.DigitalHealthApiClient
-import com.randalljuan.proyecto3_mobile_b95212_b97452.data.service.VaccinationService
+import com.randalljuan.proyecto3_mobile_b95212_b97452.utility.SessionManager
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 private lateinit var recView: RecyclerView
-private lateinit var vaccinesList2: MutableList<VaccinationModel>
 
 class VaccineActivity : AppCompatActivity() {
     val retrofit = RetrofitHelper.getRetrofit()
-    private var vaccinesList: List<VaccinationModel>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +27,7 @@ class VaccineActivity : AppCompatActivity() {
         recView = findViewById(R.id.rv_vaccine_list)
 
         val call =
-            retrofit.create(DigitalHealthApiClient::class.java).getVaccinationByCard("4-0123-0876")
+            retrofit.create(DigitalHealthApiClient::class.java).getVaccinationByCard(SessionManager.getIdCard())
         call.enqueue(object : Callback<List<VaccinationModel>> {
             override fun onResponse(
                 call: Call<List<VaccinationModel>>,
@@ -43,10 +38,10 @@ class VaccineActivity : AppCompatActivity() {
                         override fun onVaccinesClicked(position: Int) {
 
                             val intent = Intent(this@VaccineActivity, VaccineDetailsActivity::class.java)
-                            intent.putExtra("VaccineType", response.body()!![position]?.vaccinationType!!)
-                            intent.putExtra("LatestDate", response.body()!![position]?.latestVaccineDate!!)
-                            intent.putExtra("NextDate", response.body()!![position]?.nextVaccineDate!!)
-                            intent.putExtra("Description",response.body()!![position]?.description!!)
+                            intent.putExtra("VaccineType", response.body()!![position].vaccinationType!!)
+                            intent.putExtra("LatestDate", response.body()!![position].latestVaccineDate!!)
+                            intent.putExtra("NextDate", response.body()!![position].nextVaccineDate!!)
+                            intent.putExtra("Description", response.body()!![position].description!!)
                             startActivity(intent)
                         }
                     })

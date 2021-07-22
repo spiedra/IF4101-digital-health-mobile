@@ -1,10 +1,9 @@
 package com.randalljuan.proyecto3_mobile_b95212_b97452.ui.view
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.randalljuan.proyecto3_mobile_b95212_b97452.R
 

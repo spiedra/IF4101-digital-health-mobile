@@ -64,7 +64,7 @@ class MenuActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun addModules() {
+    private fun addModules() {
         val gestModule = ModuleModel("Gestión de datos")
         val appointmentModule = ModuleModel("Citas")
         val vaccineModule = ModuleModel("Vacunas")

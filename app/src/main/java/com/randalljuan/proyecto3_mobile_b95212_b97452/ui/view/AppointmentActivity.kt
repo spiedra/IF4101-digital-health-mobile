@@ -7,13 +7,11 @@ import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.randalljuan.proyecto3_mobile_b95212_b97452.R
-import com.randalljuan.proyecto3_mobile_b95212_b97452.adapter.AllergyAdapter
 import com.randalljuan.proyecto3_mobile_b95212_b97452.adapter.AppointmentAdapter
 import com.randalljuan.proyecto3_mobile_b95212_b97452.core.RetrofitHelper
-import com.randalljuan.proyecto3_mobile_b95212_b97452.data.model.AllergyModel
 import com.randalljuan.proyecto3_mobile_b95212_b97452.data.model.AppointmentModel
-import com.randalljuan.proyecto3_mobile_b95212_b97452.data.model.VaccinationModel
 import com.randalljuan.proyecto3_mobile_b95212_b97452.data.service.DigitalHealthApiClient
+import com.randalljuan.proyecto3_mobile_b95212_b97452.utility.SessionManager
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -28,17 +26,13 @@ class AppointmentActivity : AppCompatActivity() {
 
         recView =  findViewById(R.id.rv_appointment_list)
         val call =
-            retrofit.create(DigitalHealthApiClient::class.java).getAppointmentByCard("1-1818-0555")
+            retrofit.create(DigitalHealthApiClient::class.java).getAppointmentByCard(SessionManager.getIdCard())
         call.enqueue(object : Callback<List<AppointmentModel>> {
             override fun onResponse(
                 call: Call<List<AppointmentModel>>,
                 response: Response<List<AppointmentModel>>
             ) {
-                /*
-                if((response.body()){
-                    Toast.makeText(this@AllergyActivity,"No se han encontrado alergias",Toast.LENGTH_LONG)
-                }
-                 */
+
                 recView.apply {
                     val adaptador = AppointmentAdapter(response.body()!!,
                         object : AppointmentAdapter.AppointmentClickListener {
@@ -47,23 +41,23 @@ class AppointmentActivity : AppCompatActivity() {
                                     Intent(this@AppointmentActivity, AppointmentDetailsActivity::class.java)
                                 intent.putExtra(
                                     "PatientName",
-                                    response.body()!![position]?.patientName!!
+                                    response.body()!![position].patientName!!
                                 )
                                 intent.putExtra(
                                     "HealthCenter",
-                                    response.body()!![position]?.healthCenter!!
+                                    response.body()!![position].healthCenter!!
                                 )
                                 intent.putExtra(
                                     "Date",
-                                    response.body()!![position]?.date!!
+                                    response.body()!![position].date!!
                                 )
                                 intent.putExtra(
                                     "Specialty",
-                                    response.body()!![position]?.specialityType!!
+                                    response.body()!![position].specialityType!!
                                 )
                                 intent.putExtra(
                                     "Description",
-                                    response.body()!![position]?.description!!
+                                    response.body()!![position].description!!
                                 )
                                 startActivity(intent)
                             }
