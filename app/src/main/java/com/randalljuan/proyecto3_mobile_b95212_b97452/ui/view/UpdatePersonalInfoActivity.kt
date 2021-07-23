@@ -43,7 +43,7 @@ class UpdatePersonalInfoActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View) {
         when (v.id) {
             R.id.btn_update -> {
-                PatientService().updatePatient(createRequestBody("1-1818-0555", tvCivilStatus.text.toString()
+                PatientService().updatePatient(createRequestBody(SessionManager.getIdCard() , tvCivilStatus.text.toString()
                     , tvAddress.text.toString(), tvPhone1.text.toString(), tvPhone2.text.toString()),this)
             }
         }
@@ -76,6 +76,11 @@ class UpdatePersonalInfoActivity : AppCompatActivity(), View.OnClickListener {
         { idCard: String, civilStatus: String, address: String, phoneNumber1: String, phoneNumber2: String ->
             val jsonObject = JSONObject()
             jsonObject.put("idCard", idCard)
+            jsonObject.put("name", "string")
+            jsonObject.put("lastName", "string")
+            jsonObject.put("password", "string")
+            jsonObject.put("age", 0)
+            jsonObject.put("bloodType", "string")
             jsonObject.put("civilStatus", civilStatus)
             jsonObject.put("address", address)
             jsonObject.put("phoneNumber1", phoneNumber1)

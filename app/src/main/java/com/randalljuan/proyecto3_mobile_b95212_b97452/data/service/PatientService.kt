@@ -39,6 +39,7 @@ class PatientService {
         call.enqueue(object : Callback<ResponseModel> {
             override fun onResponse(call: Call<ResponseModel>, response: Response<ResponseModel>) {
                 if (response.body()?.value!!) {
+                    Log.d("jajajajajajajajajajaj lol:", "jajajaj que madre")
                     Utils.showToast(context, "Successfully updated")
                 }
             }
